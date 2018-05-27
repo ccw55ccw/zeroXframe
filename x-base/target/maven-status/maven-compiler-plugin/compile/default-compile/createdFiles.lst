@@ -1,0 +1,13 @@
+com\zerox\base\bean\Bean.class
+com\zerox\base\bean\ParseContextConfiguration.class
+com\zerox\base\bean\validate\BeanXsdValidateResolver.class
+com\zerox\base\context\ClassXmlApplicationContext.class
+com\zerox\base\common\Person.class
+com\zerox\base\common\XLogger.class
+com\zerox\base\annotation\Service.class
+com\zerox\base\bean\BeanScope.class
+com\zerox\base\bean\BeanProperty.class
+com\zerox\base\context\AbstractApplicationContext.class
+com\zerox\base\annotation\Inject.class
+com\zerox\base\bean\BeanFactory.class
+com\zerox\base\context\ApplicationContext.class

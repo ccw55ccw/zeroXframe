@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ZeroXFrame.iml" filepath="$PROJECT_DIR$/ZeroXFrame.iml" />
+      <module fileurl="file://$PROJECT_DIR$/x-base/x-base.iml" filepath="$PROJECT_DIR$/x-base/x-base.iml" />
+      <module fileurl="file://$PROJECT_DIR$/x-demo/x-demo.iml" filepath="$PROJECT_DIR$/x-demo/x-demo.iml" />
+    </modules>
+  </component>
+</project>
