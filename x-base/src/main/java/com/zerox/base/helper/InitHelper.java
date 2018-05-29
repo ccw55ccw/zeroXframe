@@ -14,7 +14,6 @@ public class InitHelper {
     public static void init(){
         for (Class aClass : initClass) {
             try {
-                //注解的class放到容器中
                 Class.forName(aClass.getName(), true, ClassLoader.getSystemClassLoader());
             } catch (Exception e) {
                 XLogger.error("init helper class error [{}]", e);

@@ -35,11 +35,14 @@ public class ActionHelper {
                 if (method.isAnnotationPresent(RequestMapping.class)) {
                     RequestMapping methodReq = method.getAnnotation(RequestMapping.class);
                     if (methodReq != null) {
-                        if (methodReq.method() != null) {
-                            request.setRequestMethod(methodReq.method().name());
-                        }
+                        request.setRequestMethod(methodReq.method().name());
                         if (actionPath != null) {
+                            if (actionPath.endsWith("/")) {
+                                actionPath = actionPath.substring(0, actionPath.lastIndexOf("/"));
+                            }
                             request.setRequestPath(actionPath + methodReq.value());
+                        } else {
+                            request.setRequestPath(methodReq.value());
                         }
                     }
                 }

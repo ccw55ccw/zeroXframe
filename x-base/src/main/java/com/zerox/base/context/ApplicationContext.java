@@ -17,6 +17,8 @@ import java.util.Map;
 
 public class ApplicationContext extends AbstractApplicationContext {
 
+    private static ApplicationContext applicationContext;
+
     private String defaultContextPath = "/applicationContext.xml";
 
     private String contextPath;
@@ -30,6 +32,8 @@ public class ApplicationContext extends AbstractApplicationContext {
         init();
 
         InitHelper.init();
+
+        applicationContext = this;
     }
 
     private void init() {

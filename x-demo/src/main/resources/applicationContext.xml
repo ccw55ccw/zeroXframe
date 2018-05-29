@@ -4,7 +4,7 @@
        xsi:schemaLocation="http://www.w3school.com.cn beans.xsd">
 
     <properties>
-        <property name="basePackage" value="com.zerox.demo"/>
+        <property name="basePackage" value="com.zerox.base.demo"/>
     </properties>
 
     <bean name="p1" class="com.zerox.base.common.Person">

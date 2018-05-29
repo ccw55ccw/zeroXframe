@@ -1,6 +1,7 @@
 package com.zerox.base.web;
 
 import com.zerox.base.common.XLogger;
+import com.zerox.base.context.ApplicationContext;
 import com.zerox.base.helper.ActionHelper;
 import com.zerox.base.helper.InitHelper;
 
@@ -20,7 +21,7 @@ public class DispatcherServlet extends HttpServlet {
     @Override
     public void init(ServletConfig config) throws ServletException {
 
-        InitHelper.init();
+        new ApplicationContext(null);
 
         ServletContext sc = config.getServletContext();
         ServletRegistration jspServlet = sc.getServletRegistration("jsp");
@@ -36,6 +37,7 @@ public class DispatcherServlet extends HttpServlet {
         String method = req.getMethod().toUpperCase();
         Request request = new Request(method, path);
         Handler handler = ActionHelper.requestHandlerMap.get(request);
+        System.out.println(req.getRemoteAddr());
         System.out.println(handler);
         req.getRequestDispatcher("/jsp/login.jsp").forward(req, resp);
 
