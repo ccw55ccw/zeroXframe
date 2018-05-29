@@ -26,13 +26,15 @@ import java.util.jar.JarFile;
 
 public class ClassHelper {
 
-    public static Class[] annotationClazzs = new Class[]{
+    private static Class[] annotationClazzs = new Class[]{
             Service.class,
             XBean.class,
             Action.class
     };
 
-    public static final List<Class> classes = new ArrayList<>();
+    private static final List<Class> classes = new ArrayList<>();
+    public static final List<Class> actionClassList = new ArrayList<>();
+    public static final List<Class> serviceClassList = new ArrayList<>();
 
     private static ClassLoader classloader = ClassHelper.class.getClassLoader();
 
@@ -155,6 +157,9 @@ public class ClassHelper {
     private static void classToBean(){
         for (Class aClass : ClassHelper.classes) {
             if (isAnnotationPresent(aClass)) {
+                if (isActionAnnotationPresent(aClass)) {
+                    actionClassList.add(aClass);
+                }
                 String beanName = getAnnotationName(aClass);
                 Object instance = null;
                 try {
@@ -183,6 +188,15 @@ public class ClassHelper {
             if (clazz.isAnnotationPresent(c)) {
                 return true;
             }
+        }
+
+        return false;
+    }
+
+    private static boolean isActionAnnotationPresent(Class clazz) {
+
+        if (clazz.isAnnotationPresent(Action.class)) {
+            return true;
         }
 
         return false;

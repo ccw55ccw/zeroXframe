@@ -6,7 +6,8 @@ public class InitHelper {
 
     private static Class[] initClass = new Class[]{
             ClassHelper.class,
-            IocHelper.class
+            IocHelper.class,
+            ActionHelper.class
     };
 
 

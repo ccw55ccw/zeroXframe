@@ -10,8 +10,6 @@ public class BaseXmlContextTest {
         Person p1 = (Person) applicationContext.getBean("p1");
         System.out.println(p1);
 
-        this.getClass().getClassLoader().loadClass("com.zerox.base.helper.ClassHelper").newInstance();
-
     }
 
 }

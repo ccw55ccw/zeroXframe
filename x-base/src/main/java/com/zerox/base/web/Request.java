@@ -9,6 +9,13 @@ public class Request {
     private String requestMethod;
     private String requestPath;
 
+    public Request(){}
+
+    public Request(String requestMethod, String requestPath) {
+        this.requestMethod = requestMethod;
+        this.requestPath = requestPath;
+    }
+
     @Override
     public int hashCode(){
        return HashCodeBuilder.reflectionHashCode(this);
@@ -21,4 +28,6 @@ public class Request {
         }
         return EqualsBuilder.reflectionEquals(this, obj);
     }
+
+
 }
