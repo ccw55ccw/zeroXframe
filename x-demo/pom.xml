@@ -79,6 +79,14 @@
                         <logCookies>true</logCookies>
                     </requestLog>
                 </configuration>
+
+                <dependencies>
+                    <dependency>
+                        <groupId>ch.qos.logback</groupId>
+                        <artifactId>logback-classic</artifactId>
+                        <version>0.9.29</version>
+                    </dependency>
+                </dependencies>
             </plugin>
         </plugins>
     </build>

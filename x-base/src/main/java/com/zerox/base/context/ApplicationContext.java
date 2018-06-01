@@ -52,5 +52,8 @@ public class ApplicationContext extends AbstractApplicationContext {
         }
     }
 
+    public static ApplicationContext getApplicationContext(){
+        return applicationContext;
+    }
 
 }

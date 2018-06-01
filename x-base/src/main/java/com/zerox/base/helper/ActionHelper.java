@@ -41,6 +41,8 @@ public class ActionHelper {
                                 actionPath = actionPath.substring(0, actionPath.lastIndexOf("/"));
                             }
                             request.setRequestPath(actionPath + methodReq.value());
+
+
                         } else {
                             request.setRequestPath(methodReq.value());
                         }

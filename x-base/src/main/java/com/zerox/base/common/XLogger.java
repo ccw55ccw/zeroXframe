@@ -1,6 +1,5 @@
 package com.zerox.base.common;
 
-import cn.hutool.log.LogFactory;
 import cn.hutool.log.StaticLog;
 
 public class XLogger {
