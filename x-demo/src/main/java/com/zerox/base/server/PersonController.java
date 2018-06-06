@@ -1,4 +1,4 @@
-package com.zerox.base.demo;
+package com.zerox.base.server;
 
 import com.zerox.base.annotation.Action;
 import com.zerox.base.annotation.Inject;

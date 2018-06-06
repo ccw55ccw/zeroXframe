@@ -55,7 +55,9 @@ public class ParseContextConfiguration {
         if (element != null) {
             List<Element> elements = element.elements("property");
             Map<String, Object> configMap = ApplicationConfig.getConfigMap();
-            elements.forEach(ParseContextConfigurationFunction.loopConfigPropertiesConsumer(configMap));
+            for (Element e : elements) {
+                configMap.put(e.attributeValue("name"), e.attributeValue("value"));
+            }
         }
     }
 

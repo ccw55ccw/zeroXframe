@@ -54,7 +54,7 @@ public class DispatcherServlet extends HttpServlet {
                 }
                 if (result != null) {
                     if (result instanceof ModelAndView) {
-                        handleJsonResp(resp, result);
+                        handleJspResp(req, resp, result.toString());
                     } else {
                         handleJsonResp(resp, result);
                     }
