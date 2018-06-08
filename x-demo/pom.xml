@@ -13,10 +13,6 @@
 
     <packaging>war</packaging>
 
-    <properties>
-        <jetty.version>9.2.9.v20150224</jetty.version>
-    </properties>
-
     <dependencies>
         <dependency>
             <groupId>com.zerox.base</groupId>
