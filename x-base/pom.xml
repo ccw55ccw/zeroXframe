@@ -15,7 +15,7 @@
     <build>
 
         <finalName>
-            test
+            x-base
         </finalName>
         <resources>
             <resource>
