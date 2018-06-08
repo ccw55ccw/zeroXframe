@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assembly xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2">
+    <id>x-demo</id>
+    <!--<baseDirectory>${project.artifactId}.war</baseDirectory>-->
+    <includeBaseDirectory>true</includeBaseDirectory>
+    <formats>
+        <format>zip</format>
+    </formats>
+    <fileSets>
+        <!-- 将class和配置文件打到WEB-INF/classes下 -->
+        <fileSet>
+            <directory>${project.basedir}/target/classes</directory>
+            <outputDirectory>WEB-INF/classes</outputDirectory>
+        </fileSet>
+
+        <!-- 将webapp下的内容全部打到WEB-INF/classes -->
+        <fileSet>
+            <directory>${project.basedir}/src/main/webapp</directory>
+            <outputDirectory>./</outputDirectory>
+        </fileSet>
+
+    </fileSets>
+
+    <files>
+        <file>
+            <source>${project.basedir}/target/x-demo-1.0-SNAPSHOT.jar</source>
+            <outputDirectory>./</outputDirectory>
+        </file>
+    </files>
+
+    <dependencySets>
+        <dependencySet>
+            <unpack>false</unpack>
+            <outputDirectory>WEB-INF/lib</outputDirectory>
+            <useProjectArtifact>true</useProjectArtifact>
+            <!-- 将scope为runtime的依赖包打包到lib目录下。 -->
+            <scope>runtime</scope>
+        </dependencySet>
+    </dependencySets>
+</assembly>

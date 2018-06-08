@@ -11,6 +11,7 @@
     <modules>
         <module>x-base</module>
         <module>x-demo</module>
+        <module>x-starter</module>
     </modules>
 
 

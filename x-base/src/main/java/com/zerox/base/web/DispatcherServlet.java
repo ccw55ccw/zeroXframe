@@ -40,11 +40,11 @@ public class DispatcherServlet extends HttpServlet {
         String path = req.getRequestURI();
         String methodStr = req.getMethod().toUpperCase();
         Request request = new Request(methodStr, path);
-        Handler handler = ActionHelper.requestHandlerMap.get(request);
-        if (handler != null) {
-            BeanObject controller = BeanContextContainer.getContainer().get(handler.getControllerClass().getName());
+        XHandler XHandler = ActionHelper.requestHandlerMap.get(request);
+        if (XHandler != null) {
+            BeanObject controller = BeanContextContainer.getContainer().get(XHandler.getControllerClass().getName());
             if (controller != null) {
-                Method method = handler.getHandleMethod();
+                Method method = XHandler.getHandleMethod();
                 Object result = null;
                 try {
                     String params = req.getParameterValues("params")[0];

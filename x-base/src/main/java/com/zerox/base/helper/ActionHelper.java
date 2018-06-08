@@ -1,7 +1,7 @@
 package com.zerox.base.helper;
 
 import com.zerox.base.annotation.RequestMapping;
-import com.zerox.base.web.Handler;
+import com.zerox.base.web.XHandler;
 import com.zerox.base.web.Request;
 
 import java.lang.reflect.Method;
@@ -11,7 +11,7 @@ import java.util.Map;
 
 public class ActionHelper {
 
-    public static final Map<Request, Handler> requestHandlerMap = new HashMap<>();
+    public static final Map<Request, XHandler> requestHandlerMap = new HashMap<>();
 
     static {
         initMap();
@@ -49,11 +49,11 @@ public class ActionHelper {
                     }
                 }
 
-                Handler handler = new Handler();
-                handler.setControllerClass(aClass);
-                handler.setHandleMethod(method);
+                XHandler XHandler = new XHandler();
+                XHandler.setControllerClass(aClass);
+                XHandler.setHandleMethod(method);
 
-                requestHandlerMap.put(request, handler);
+                requestHandlerMap.put(request, XHandler);
             }
 
         }
